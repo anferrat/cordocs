@@ -1,0 +1,43 @@
+import Image from "next/image";
+import ImageView from "../components/imageView";
+import { Callout } from "nextra/components";
+
+# Corrosion calculator
+
+Corpad offers corrosion calculation functionality accessible via Settings -> Corrosion calculator. The following calculators are available:
+
+- Shunt converter
+- Current span (2-wire method)
+- Current Span (4-wire method)
+- Layer resistivity measurement
+- Coating quality measurement
+- Reference cell converter
+
+<ImageView>
+  <Image src="/images/calculator/8.1.png" alt="Add" width={300} height={300} />
+  <Image src="/images/calculator/8.2.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout>
+  **FEEDBACK NEEDED:** If you have ideas for a new calculators to be added,
+  don't hesitate and send an e-mail with your suggestions to
+  [andrei@corpad.ca](mailto:andrei@corpad.ca)
+</Callout>
+
+## Working with calculator
+
+To perform a calculation, fill out the required fields in the calculator and press 'Calculate'. For detailed instructions on the procedure and necessary measurements, press '?' at the top right corner of the screen.
+
+After the calculation is completed, the result view will be displayed at the top. You can save the result by pressing the 'Save' button. To access saved calculations, press the 'History…' button at the top right side of the screen and select the saved calculation.
+
+To export the initial data and calculation result as a .csv file, press the 'Export' button. The file will be available in [Exported files](./export/exported_files.mdx) screen To start a new calculation, press 'Reset'.
+
+<ImageView>
+  <Image src="/images/calculator/8.3.png" alt="Add" width={300} height={300} />
+  <Image src="/images/calculator/8.4.png" alt="Add" width={300} height={300} />
+  <Image src="/images/calculator/8.5.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Saved calculations cannot be edited, but can be exported.
+</Callout>

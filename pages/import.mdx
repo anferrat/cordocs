@@ -1,0 +1,154 @@
+import Image from "next/image";
+import ImageView from "../components/imageView";
+import { Callout } from "nextra/components";
+
+# Import
+
+You can utilize .csv files to speed up the process of generating multiple items within a survey. Here's how:
+
+1. Begin by creating an empty survey.
+2. Next, navigate to the bottom of the screen and tap on the "Add" button.
+3. From the options that appear, select "Import from .csv".
+
+<ImageView>
+  <Image src="/images/import/7.1.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+This functionality allows you to efficiently populate your survey with data from a .csv file, saving you time and effort.
+
+<Callout type="info" emoji="ℹ️">
+  Selecting "Import survey from .csv" in the survey list screen functions
+  similarly to creating a blank survey and initiating the data import process
+  afterward.
+</Callout>
+
+## Selecting a file
+
+Before importing items from a .csv file, you need to specify the item type you want to import. Remember, you can only import items of a single type at a time, whether it's test points, pipelines, or rectifiers.
+
+If you're importing pipelines, it's advisable to do so before importing test points, allowing you to assign test points to the imported pipelines seamlessly. Additionally, ensure that you've configured the potential types in Settings and created custom potentials if necessary.
+
+<ImageView>
+  <Image src="/images/import/7.2.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+Once you've selected the item type, click on the "Select file" button. This action will open the system file picker, allowing you to locate the .csv file you want to import.
+
+Your file should adhere to common spreadsheet formats, using UTF-8 encoding with commas as delimiter characters. The first row of the .csv file will be treated as headers for the data, and the values will not be imported. If the first row contains empty cells, the system will generate default column names.
+
+Avoid using special characters in the first row, as this could lead to errors during the import process, preventing the file from being imported successfully.
+
+<Callout type="info" emoji="ℹ️">
+  It's important to avoid using large .csv files. Large files can strain device
+  resources and may cause the app to crash, particularly on older or less
+  powerful devices. Keeping your .csv files smaller ensures smoother performance
+  and reduces the risk of encountering app crashes during the import process.
+</Callout>
+
+## Import parameters
+
+Setting up item properties involves matching the properties of items with columns in your spreadsheet file. On the main screen, you'll find property fields where you can set parameters for how these properties will be assigned a value. Here are the available options:
+
+- **\<Empty\>** - this means that all created items will have this property left blank.
+- **Fixed value** - with this option, all created items will have a selected value assigned to this property, regardless of the item's index.
+- **Default name** - this option is only applicable for the name property. It indicates that the name property for each individual item will be assigned as a combination of the default name (see Default names) and the index of the item in the spreadsheet.
+- **Field value** - displayed with the label "field:" followed by the name of the selected field. This indicates that values for this property will be generated from a column in the spreadsheet. You can view the values in the selected column by pressing the Text File Button on the left side of the field.
+
+<ImageView>
+  <Image src="/images/import/7.3.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  If some values in a spreadsheet have incorrect types (such as text instead of
+  a number, or names with invalid symbols), empty values will be assigned
+  whenever possible. However, if an empty value cannot be assigned (for example,
+  in the case of the name property), then the item will be skipped.
+</Callout>
+
+## Adjusting import parameters for a property
+
+To adjust the import parameters, simply press on the property that you would like to modify, which will prompt a parameter screen to appear.
+
+In this parameter screen, you will find a list of options to select from:
+
+- **Use fixed value** - when this option is selected, you can simply type in the value that you want to assign, or select it from a list of predefined values.
+
+- **Use values from a column in the data file** - selecting this option allows you to choose a column name from your spreadsheet file. The values from this selected column will then be assigned to the new items.
+
+- **Use default name** - this option assigns the default name of an item or reading to the property. Additionally, you can specify a reading index for the first item.
+
+- **Merge values from two or more columns** - this option is only available for some properties. When selected, it combines values from multiple columns and assigns them to the property.
+
+For properties such as potentials, current, etc., you should also select a unit when importing them from the spreadsheet. Ensure that you select the appropriate unit used in the spreadsheet. This step is necessary for Corpad to accurately convert these values for its internal database.
+
+<ImageView>
+  <Image src="/images/import/7.4.png" alt="Add" width={300} height={300} />
+  <Image src="/images/import/7.5.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+## Attribute mapping
+
+Attribute mapping is a useful feature designed to facilitate the import process, especially when dealing with pre-defined values in the Corpad app. Here's how attribute mapping works:
+
+**Example Scenario:**
+
+Let's say you have a spreadsheet containing test points, with two columns: 'Name' and 'Type'. In the 'Type' column, you have values A, B, and C, where A and B represent different types of test stations, and C represents a header.
+
+<ImageView>
+  <Image src="/images/import/7.6.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+**Attribute Mapping Process:**
+
+1. When importing the spreadsheet, select the 'Test point type' property.
+2. Choose the option 'Use values from a column in the data file' and select the 'Type' column.
+3. At the bottom part of the screen, you'll find the attribute mapping section.
+4. Select the property value 'Test Station' from the Corpad app.
+5. From the list of 'Values from .csv', select values A and B.
+6. Press the arrow button to add the new attribute mapping to the list.
+
+<ImageView>
+  <Image src="/images/import/7.7.png" alt="Add" width={300} height={300} />
+  <Image src="/images/import/7.8.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+**Outcome:**
+
+Now, when a new test point is created, Corpad will examine the values in the 'Type' column. If the value in the column matches A or B, Corpad will automatically assign the value 'Test Station' to the test point type property for that item.
+
+By using attribute mapping, you can ensure that the imported data aligns with the predefined values in Corpad, streamlining the import process and reducing manual effort.
+
+## Adding readings
+
+Same as when creating an item, you can add readings to survey items and assign values from spreadsheet to the reading properties. When importing, the readings will be automatically created for every imported item. To read more about readings check how to [create readings.](./survey_items/test_points/readings.mdx)
+
+<ImageView>
+  <Image src="/images/import/7.9.png" alt="Add" width={300} height={300} />
+  <Image src="/images/import/7.10.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Certain reading types, such as Soil Resistivity Test and Anode Bed, are not
+  available for import.
+</Callout>
+
+## Starting import
+
+After selecting all parameters, click on "Import" and then "Start". A modal will appear, displaying information about how many items were successfully created. If you want to see more detailed information about any errors or warnings encountered during the import process, click on "Details". To exit the import process and return to the survey list, click on "Go to List".
+
+<ImageView>
+  <Image src="/images/import/7.11.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+## Undoing last import
+
+If the import didn't yield the desired result, you have the option to cancel the recent import. This functionality is available immediately after the import process, but it won't be accessible if you navigate away from the survey where the items were imported. To undo the import, follow these steps:
+
+1. Tap on the "Add" button at the bottom of the screen.
+2. Select "Import from .csv".
+3. You should see the status of the last import at the top of the screen.
+4. Press "Undo import", and all the imported items will be removed from the current survey.
+
+<ImageView>
+  <Image src="/images/import/7.12.png" alt="Add" width={300} height={300} />
+</ImageView>

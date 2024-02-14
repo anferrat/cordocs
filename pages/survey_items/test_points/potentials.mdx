@@ -1,0 +1,53 @@
+import Image from "next/image";
+import ImageView from "../../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Creating potentials
+
+Some readings (e.g. test leads, riser etc.) have "Potentials" property, allowing you to record potential values.
+
+There are five standard potential types that are automatically created and available in every survey:
+
+- **ON** - used as Pipe-To-Soil potential.
+- **OFF** - used as Pipe-To-Soil potential without IR drop.
+- **NATIVE** - used to record the potential of the pipe before any CP was applied to the pipe.
+- **CONNECTED** - used when recording potentials of coupons or galvanic anodes when they are connected to the pipe.
+- **DISCONNECTED** - used when recording potentials of coupons or galvanic anodes when they are disconnected from the pipe.
+
+To create new potential field for a test point reading press "Add potentials" button and select a type.
+
+<Callout type="info" emoji="ℹ️">
+  By default On and Off potential fields will be created. You can change this in
+  settings.
+</Callout>
+
+If you have more than one refercne cell available (portable and stationary), you will be prompted to select a reference cell you would like to use for a selected potential type. Only one potential of a specific type with the same reference cell can be created for a single reading.
+
+To view the name of the reference cell that the potential type is assigned to, press on the reference cell icon at the right side of the input field.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.7.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+  <Image
+    src="/images/survey_items/3.18.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+  <Image
+    src="/images/survey_items/3.19.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Potential types are arbitrary, ON and OFF potentials must be used when
+  recording data with multimeter, however custom types can be created and used
+  in a survey. (e.g. PipeToSoil, IRF, AC, etc.)
+</Callout>

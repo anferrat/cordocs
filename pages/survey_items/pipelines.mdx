@@ -1,0 +1,61 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Pipelines
+
+A Pipeline (or pipe segment) is an item that groups together a set of test point readings based on arbitrary parameters (e.g., location, protection from a single rectifier, license number).
+
+Pipelines have their own properties, such as pipe material and substance.
+
+## Creating pipelines
+
+To create a new pipeline, navigate to the main screen and select the "Add" tab, followed by "Pipeline". Complete the necessary properties and proceed by clicking "Save".
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.31.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+  <Image
+    src="/images/survey_items/3.32.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+A pipeline has the following properties:
+
+- **Name** - the name of the pipeline. If left blank, a default name with an index will be automatically assigned. See [Default names](/../../manage_survey/default_names.mdx) for more details.
+
+- **License #** - the pipeline's license number as granted by regulatory agencies; leave this field empty if no license is applicable.
+
+- **Coating** - property indicates whether the pipe surface is bare or coated.
+
+- **Material** - the material constituting the pipe.
+
+- **Pipe size** - the Nominal Pipe Size (NPS).
+
+- **Product** - indicates the substance or product conveyed through the pipeline.
+
+- **Comments** - any additional notes related to the pipeline.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.33.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Pipeline test leads and risers can be assigned to pipelines.
+</Callout>
+
+<Callout type="info" emoji="ℹ️">
+  There is one pipeline created by default with every new survey.
+</Callout>

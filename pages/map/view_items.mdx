@@ -1,0 +1,26 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Displaying survey items
+
+All test points and rectifiers are automatically displayed on the map, as long as they have correct latitude and longitude.
+
+To view a survey item, simply tap on the icon of the item on the map. Upon selection, a modal view will appear, displaying its name, type, and location description.
+
+<ImageView>
+  <Image src="/images/map/5.2.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+To access the full information about the item or make edits, tap on the modal view. You will be directed to the view screen. Additionally, you can utilize the "Open in Maps" button to export the coordinates of the item to a third-party app for navigation or to share with other users.
+
+## Updating coordinates
+
+The map markers in Corpad support drag-and-drop functionality. To adjust the coordinates of an item, simply tap and hold on the marker. After a long press, move your finger around the map to the desired location. Once you've positioned the marker where you want it, lift your finger off the screen to place the marker at the new location.
+
+This will automatically update latitude and longitude of the item (test point or rectifier) in the database.
+
+<Callout type="info" emoji="ℹ️">
+  A long press on the modal view will trigger the map to zoom in to the selected
+  marker.
+</Callout>

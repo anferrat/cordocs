@@ -1,0 +1,30 @@
+import Image from "next/image";
+import ImageView from "../components/imageView";
+
+# Managing surveys
+
+## Understanding data handling
+
+It is essential to understand the fundamental concept of data handling in Corpad. Surveys are stored in survey files, which are text documents containing all the information about test points, rectifiers, pipelines, etc. These files are kept in the application folder on your device and can be conveniently shared with other users via email attachments or uploaded to cloud storage platforms.
+
+The survey list screen exhibits the survey files stored on the device and provides the option to open these files using the Corpad app.
+
+<ImageView>
+  <Image
+    src="/images/manage_survey/4.8.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+When a survey file is opened in the app, all the data from the file is transferred to a local database. In this database, the data can be retrieved and updated as needed. After closing the survey, the data stored in the database is converted back to a survey file format, and the original survey file is updated accordingly. This process ensures that any modifications made during the survey session are accurately reflected in the survey file for future reference and sharing.
+
+## Survey managing features
+
+All recorded survey items are conveniently displayed in a list format under corresponding tabs, enabling easy access and updating of information as needed. Corpad simplifies the process of working with corrosion data by eliminating the need for any additional devices; all you need is your phone. Additionally, Corpad offers several useful features that leverage your device's sensors to streamline data capture. Some of these features include:
+
+- Record current GPS coordinates.
+- Sort test points by proximity from the user.
+- Display direction and distance to a selected test point or rectifier.
+- Capture images and assign them to a test point or rectifier.

@@ -1,0 +1,40 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Reference cells
+
+Each survey can incorporate several reference cells, which are utilized to create and record potentials.
+
+By default, each survey includes one reference cell, designated as RC1. However, you have the option to create additional reference cells within a single survey.
+
+To create a new reference cell, navigate to Settings -> Reference Cells and press the "Add reference cell" button at the bottom of the screen. Then, input a name for the reference cell, specify its type, and press "Create".
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.34.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+  <Image
+    src="/images/survey_items/3.35.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+You can also delete reference cells from the survey by tapping the cross sign next to the name of the reference cell. At least one reference cell will always be available in the survey.
+
+If your survey contains more than one reference cell, one of them will serve as the main reference and will be utilized when displaying potential readings in the main list or when creating default potentials for test point readings.
+
+To select a new main reference, simply tap on it in the list. The main reference will be indicated by a checkmark sign to the right of its name.
+
+It's advisable to refrain from having multiple reference cells in the survey unless it's necessary, as it may complicate the process of creating new potentials, viewing, and exporting values.
+
+<Callout type="info" emoji="ℹ️">
+  When deleting a reference cell, all potential readings that utilize that cell
+  as a reference will be permanently deleted. Ensure you are aware of the
+  consequences before proceeding with the deletion of a reference cell.
+</Callout>

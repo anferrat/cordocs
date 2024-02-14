@@ -1,0 +1,20 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Creating survey items
+
+Corpad allows to create new test points or rectifiers directly from the map. Simply long press on an empty space on the map where you wish to create a new item. Then, select the desired type from the options that appear.
+
+After selecting the type of item you want to create from the options that appear, you will be directed to a screen where the latitude and longitude fields are automatically pre-filled with the coordinates you selected on the map.
+
+<ImageView>
+  <Image src="/images/map/5.3.png" alt="Add" width={300} height={300} />
+  <Image src="/images/map/5.4.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  The top option when selecting a type is "Share coordinate" When you choose
+  this option, the selected latitude and longitude will be shared with a
+  third-party app of your choice.
+</Callout>

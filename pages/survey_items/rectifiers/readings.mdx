@@ -1,0 +1,50 @@
+import Image from "next/image";
+import ImageView from "../../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Creating rectifier readings
+
+Rectifier readings are smaller blocks that can only exist whithin a rectifier. There are two types of readings, and a rectifier can have any number of any type of readings or no readings at all.
+
+To create a new reading press "Add reading" button and select a reading type.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.28.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+## Rectifier readings
+
+### Rectifier circuit
+
+Represents the DC output circuit of the rectifier. Current field contains Amps, and voltage contains Volts of circuit output. Target min and max represent desired brackets of current output for the circuit. Current calculation options helps to clculate current based on shunt properties and voltage drop.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.29.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+### Anode bed
+
+Represents the impressed current rectifier anode bed and allows recording current outputs for individual anodes. You can select properties such as anode material, ground bed type, and enclosure type that best describe the rectifier's anode bed.
+
+Each anode bed can have up to 10 individual anodes. To add a new anode, press "Add anode" button and enter output current.
+
+To edit anode wire properties, press on Anode name and select the color and gauge of the wire attached to the anode and press "Apply". If the option "Apply to all" is selected, that chosen color and gauge will be assigned to all anodes in the anode bed.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.30.png"
+    alt="Add"
+    width={300}
+    height={300}
+  />
+</ImageView>

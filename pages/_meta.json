@@ -1,15 +1,24 @@
 {
   "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "about": {
-    "title": "About",
-    "type": "page"
+  "---": {
+    "type": "separator"
   },
+  "create": "Creating surveys",
+  "survey_items": "Survey items",
+  "manage_survey": "Managing surveys",
+  "map": "Map",
+  "export": "Export",
+  "import": "Import",
+  "calculator": "Corrosion calculator",
+  "multimeter": "Bluetooth multimeter",
+  "--": {
+    "type": "separator"
+  },
+  "faq": "FAQs",
   "contact": {
-    "title": "Contact ↗",
+    "title": "Contact",
     "type": "page",
-    "href": "https://twitter.com/shuding_",
+    "href": "https://www.linkedin.com/in/andrei-lomtev/",
     "newWindow": true
   }
 }

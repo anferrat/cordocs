@@ -1,0 +1,37 @@
+import Image from "next/image";
+import ImageView from "../../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Potential settings
+
+You can customize the way potentials are recorded in the Settings menu, accessible from the main screen.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.21.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+  <Image
+    src="/images/survey_items/3.22.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+There are some of the properties that are available for you to change:
+
+- **Potential Unit** - This setting allows you to select one of four possible options for recording potentials. The selected unit will be used throughout the app when recording potentials.
+- **Auto-create potentials** - With this option, you can choose to automatically create ON/OFF potentials when creating a new reading that can have potentials. When turned off, you will need to manually add potentials inside the reading edit screen.
+- **Potential Types** - In addition to the five standard potential types, you can create custom potential types that will be available within the opened survey. To create a custom potential type, press "Add potential type" button and enter the name of the new potential.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.24.png"
+    alt="Readings"
+    width={300}
+    height={300}
+  />
+</ImageView>

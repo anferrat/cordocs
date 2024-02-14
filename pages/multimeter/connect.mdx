@@ -1,0 +1,30 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Connecting a multimeter
+
+To connect a multimeter, navigate to Settings -> Digital multimeter and tap on "Search for multimeters". Ensure that Bluetooth is enabled and that you have granted the app permissions to use Bluetooth. You can adjust these permissions in your phone settings.
+
+<ImageView>
+  <Image src="/images/multimeter/9.3.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+Ensure that your multimeter is charged and powered on. For Pokit Pro multimeters, you need to press the physical button once to wake it up. Then, press 'Continue'.
+
+The multimeter should appear in the list below. Tap on it and wait for 5-10 seconds while it connects to your phone.
+
+<ImageView>
+  <Image src="/images/multimeter/9.4.png" alt="Add" width={300} height={300} />
+  <Image src="/images/multimeter/9.5.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Corpad will attempt to connect to the previously paired multimeter when you
+  restart the app.
+</Callout>
+
+<Callout type="info" emoji="ℹ️">
+  Do not try to connect to the multimeter using the default Bluetooth devices
+  tab in your phone settings, as it will not work.
+</Callout>

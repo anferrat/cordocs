@@ -1,0 +1,53 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Map layers
+
+The Map layers feature enables the display of additional geodata on the map. It converts .kml and .gpx files to geoJSON format and saves them with the survey. This ensures that geo features are available when exporting the survey elsewhere.
+
+## Creating map layers
+
+To add a new layer, simply press the layer button on the right side of the screen, and then select "Add a map layer."
+
+<ImageView>
+  <Image src="/images/map/5.5.png" alt="Add" width={300} height={300} />
+  <Image src="/images/map/5.6.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+After selecting "Add a Map Layer," you will be prompted to choose a KML or GPX file. Once you've selected the file, you'll be transferred to the layer edit screen.
+
+On the layer edit screen, you can name the layer, assign a layer color, and adjust the stroke width. All features within a single layer will share the same color. If you wish to have multiple colors, you'll need to use different layers.
+
+Once you've selected the appropriate parameters and added comments, press "Create."
+
+<ImageView>
+  <Image src="/images/map/5.7.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+## Managing map layers
+
+If a survey have map layers, you will see their names in the list along with the number of imported features. The checkbox next to the layer represents its visibility on the map. To view the layer on the map, click on the triple dots next to the layer name and select "Go to."
+
+<ImageView>
+  <Image src="/images/map/5.8.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+You can also edit layer properties or delete the layer from the survey. When deleting map layer, the original .kml or .gpx file will not be affected.
+
+## Geo file requirements
+
+Imported .kml or .gpx file must:
+
+- Be less than 3MB
+- Has less than 500 features
+
+Geo data can be complex and may require significant computing power to display. Therefore, there is a 3 MB limit for importing geo files. If your file exceeds this limit, please use third-party software to split it into smaller chunks.
+
+Additionally, there is a cap on the number of features that a single layer can contain. If a layer has more than 500 features, the extra features will be cropped, and a prompt message will be displayed. It's advisable to avoid using complex geo-data files for better performance, especially on older devices.
+
+To learn more about features refer to [GeoJSON documentation](https://geojson.org)
+
+<Callout type="info" emoji="ℹ️">
+  A single survey can have up to ten map layers.
+</Callout>

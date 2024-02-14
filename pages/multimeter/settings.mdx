@@ -1,0 +1,44 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Multimeter settings
+
+To access the multimeter settings, navigate to Settings -> Digital Multimeter. You can adjust settings only if the multimeter was previously paired. If the multimeter is not currently connected, you can connect it using the 'Connect' button. Ensure the multimeter is charged and ready to connect (you may need to wake it up by pressing a button).
+
+<ImageView>
+  <Image src="/images/multimeter/9.5.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+## Cycle Settings
+
+Cycle settings allow you to modify ON/OFF potential cycle durations and select the algorithm used to determine the cycles.
+
+To change the cycle duration, select 'ON/OFF Cycles' using the button tokens at the top of the screen or manually enter values in the text fields.
+
+<ImageView>
+  <Image src="/images/multimeter/9.9.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+There are three algorithms for determining ON/OFF cycles:
+
+### High-Low:
+
+Assigns the most negative reading measured during the cycle to the ON potential and the most positive to the OFF potential.
+Simple and effective, but may be inaccurate in case of opposite shifts or false readings collected during the cycle.
+
+### GPS Sync
+
+Synchronizes your phone clock with GPS time and records ON and OFF readings according to the current time.
+Ensure your phone's GPS is working properly and has access to a clear sky.
+Cycle duration must be aliquot to 60 seconds (e.g., 5 sec ON, 1 sec OFF - 6 sec total. 60/6 = 10 cycles per minute).
+
+### Shift
+
+Determines ON/OFF cycles without GPS by analyzing collected readings and cycle duration.
+Maps values to cycles like a human does with an analog multimeter.
+Requires different cycle durations for accurate results.
+How it works:
+The multimeter collects readings according to the specified cycle settings. It analyzes the shift in readings and assigns values accordingly. Outliers are filtered, and the first reading in the cycle is selected.
+
+Select the algorithm that best suits your needs. More algorithms will be added in the future, including options to sync time using NTP protocol, enabling time sync readings in areas without a clear sky view.

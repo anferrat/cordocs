@@ -1,0 +1,29 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
+
+# Collecting data
+
+To collect potential data, first select a test point from a survey and navigate to the view screen. If the multimeter is paired, there will be a button on the left side of the field with the multimeter icon. Tap on this button to access the multimeter view.
+
+<ImageView>
+  <Image src="/images/multimeter/9.6.png" alt="Add" width={300} height={300} />
+  <Image src="/images/multimeter/9.7.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Ensure that your multimeter is set to the appropriate setting before
+  attempting to capture values.
+</Callout>
+
+To capture measured value, either press the 'Capture' button located at the bottom of the screen or use a button on the multimeter itself.
+
+## Capturing ON/OFF cycles
+
+When capturing potentials, you will have an option to activate cycle capture. The mode for determining ON/OFF cycles and their times will be shown. You can adjust these values in Settings -> Digital Multimeter.
+
+<ImageView>
+  <Image src="/images/multimeter/9.8.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+When capturing both potentials, you can select either the ON or OFF potential fields. The captured values will be assigned to both fields (if both are present in the same reading) according to the cycle settings.
