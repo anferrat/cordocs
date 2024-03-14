@@ -1,0 +1,51 @@
+import { Cards, Card, Callout } from "nextra/components";
+import Image from "next/image";
+import ImageView from "../components/imageView";
+
+# NFC labels
+
+Corpad utilizes the device's NFC module, allowing the reading and writing of test point and rectifier information to and from NFC tags. This functionality is only supported on devices with a built-in NFC module.
+
+## What is NFC?
+
+Near Field Communication (NFC) is a wireless communication protocol that enables the transfer of data between two electronic devices over a short distance of up to 4 centimeters (1.6 inches).
+
+In Corpad, one of the devices involved in Near Field Communication (NFC) is your phone, while the other device is an NFC tag — a small electronic label available in various forms and shapes. When you bring your phone close to the NFC tag, data can be transferred almost instantly in both directions.
+
+## What can I store on NFC tags?
+
+You can store a wide range of information on NFC tags using the Corpad app. This includes the configuration details of a test point or rectifier, such as comments, potentials, currents, wire properties, and more.
+
+The only limitation is the capacity of the NFC tag, which varies depending on the type of tag you are using. Check the [Supported tags](/nfc/supported_tags.mdx) to learn more about the types of tags compatible with Corpad.
+
+## How does it work?
+
+The information written on the NFC tag using Corpad can be read by other users who have the Corpad app installed on their devices. These users will be able to access and utilize the information stored on the tag in various ways:
+
+- **Read the Information** - other users can use their devices to read the data stored on the NFC tag.
+
+- **Create Survey Records** - users can create a new test point or rectifier in their survey based on the information stored on the tag.
+
+- **Locate Survey Records** - users can use the information from the tag to locate and access existing records in their survey that correspond to the data stored on the tag.
+
+<ImageView>
+  <Image
+    src="/images/nfc/10.1.png"
+    alt="NFC tag view"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  NFC is the technology used for contactless payment with your phone, among
+  other applications. Almost all modern phones come equipped with an NFC module,
+  which enables various functionalities beyond just contactless payments.
+</Callout>
+
+<Cards>
+  <Card title="Writing and reading" href="/nfc/writing_and_reading" />
+  <Card title="Supported tags" href="/nfc/supported_tags" />
+  <Card title="Tag-errors" href="/nfc/tag_errors" />
+  <Card title="Order tags" href="/nfc/order_tags" />
+</Cards>

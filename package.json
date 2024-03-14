@@ -1,6 +1,6 @@
 {
   "name": "corpad_documentation",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Corpad documentation",
   "scripts": {
     "dev": "next dev",

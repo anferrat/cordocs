@@ -11,6 +11,7 @@
   "import": "Import",
   "calculator": "Corrosion calculator",
   "multimeter": "Bluetooth multimeter",
+  "nfc": "NFC labels",
   "--": {
     "type": "separator"
   },
