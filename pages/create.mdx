@@ -5,12 +5,12 @@ import ImageView from "../components/imageView";
 
 ## Creating a new survey
 
-To initiate data collection, you need to create a new survey. A survey in Corpad is where all your data is stored.
+To initiate data collection, you need to create a new survey. Once it is created, a file will be generated on your device (or Google drive), and that file is where all your data is stored.
 
-Once a survey is created, the app will only operate within that survey, and other surveys will be inaccessible until you close the current one.
+Once a survey is created, the app will only operate within that survey. In order to access another survey, you should exit the curretly opened one.
 
 To create a new survey, simply tap the "+" sign or select the "Create new survey" button.
-Additionally, you can create a new survey using data from a .csv file (see [Import](/import.mdx)).
+Additionally, you can create a new survey using data from a spreadsheet (.xlsx or .csv) (see [Import](/import.mdx)).
 Type the desired name for the survey and press “Create” button.
 
 <ImageView>
@@ -20,7 +20,7 @@ Type the desired name for the survey and press “Create” button.
 
 ## Survey Types
 
-There are two types of surveys in Corpad: Device-based and Cloud-based. Both types function similarly in terms of data collection but differ in how the data is stored.
+There are two types of surveys in Corpad: device-based and cloud-based. Both types function similarly in terms of data collection but differ in how the data is stored.
 
 - Device-based surveys are stored directly on your phone, providing a fully offline option that remains accessible as long as you have your phone with you.
 
@@ -30,7 +30,7 @@ After creation, these surveys will be listed on the main screen under the tabs l
 
 ## Template
 
-If you already have a survey stored on your device, you can create a new survey using an existing survey as a template.
+If you already have a survey under 'Device' tab, you can create a new survey using that survey as a template.
 
 This action generates a copy of the existing survey while clearing all non-permanent reading values (such as potentials, currents, voltage drops, etc.) and resetting the statuses of all items to "Unchecked".
 
@@ -39,3 +39,9 @@ For premium users, there's also an option to copy images from the template surve
 <ImageView>
   <Image src="/images/create/2.3.png" alt="Hello" width={300} height={300} />
 </ImageView>
+
+## Opening shared survey files
+
+If you have a survey file stored somewhere on the device or cloud storage, you can open it by selecting "Folder" button in the top right corner. 
+
+Note that when opening external files, their content will not be modified directly. Instead, a copy of the file content will be created in the app, and all modification, will be saved in a different file.
