@@ -3,26 +3,25 @@ import ImageView from "../../components/imageView";
 
 # Default names
 
-Default names allow users to define a prefix for newly created items and readings to avoid the need for manual input of names on newly created items.
+Default names allow users to define a prefix for new items and readings when name was not provided.
 
 When a new item (test point, pipeline, rectifier) or reading is created without a name, a default name is automatically assigned, consisting of the defined prefix and the index of the item in the list.
 
 For instance, if the default prefix for test points is "TP" and there are ten test points in the survey, the newly created test point will be named "TP 11".
 
-You can customize the prefix in Settings -> Default Names by selecting the type of item or reading from the list, editing the prefix value in the input field, and then saving the changes.
+You can customize the prefix in 'Settings' -> 'Default names' by selecting the type of item or reading from the list, editing the prefix value in the input field, and then saving the changes.
 
 <ImageView>
   <Image
     src="/images/manage_survey/4.4.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ## Pipeline name as default
 
-The readings "Pipeline Test Lead" and "Riser" have an additional option for default names, which is "Use pipeline name as default".
+The readings "Pipeline test lead" and "Riser" have an additional option for default names, which is "Use pipeline name as default".
 
 If selected, when a test lead or riser is assigned to a specific pipeline, the name of that pipeline will be used to name these readings without an index. If pipelines are not assigned, the default name is used.
 
@@ -31,6 +30,5 @@ If selected, when a test lead or riser is assigned to a specific pipeline, the n
     src="/images/manage_survey/4.5.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>

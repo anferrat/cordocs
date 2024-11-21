@@ -4,19 +4,18 @@ import { Callout } from "nextra/components";
 
 # Displaying survey items
 
-Upon creating a new test point, pipeline, or rectifier, or accessing them from the list or the map, you will be directed to the View screen. This screen displays all the properties of the item and provides a quick way to edit values, such as potentials, voltage drop and current.
+After creating a new test point, pipeline, or rectifier, or accessing them from the list or the map, you will be directed to the 'View' screen. This screen displays all the properties of the item and provides a quick way to edit some values, such as potentials, voltage drop and current.
 
 <ImageView>
   <Image
     src="/images/manage_survey/4.1.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 <Callout type="info" emoji="ℹ️">
-  To alter the status of your test point or rectifier on the View screen, simply
+  To change status of your test point or rectifier on the 'View' screen, simply
   tap the status button once to shift to the next status. Long pressing the
   status button will reset it to the "Unchecked" status.
 </Callout>
@@ -30,15 +29,13 @@ The Compass feature utilizes the phone's GPS and orientation sensors to determin
     src="/images/manage_survey/4.2.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 The arrow will indicate the direction towards the point, while the labels display bearings in degrees and cardinal directions between you and the survey item. This feature is available only if your device has gyroscope, accelerometer and magnetic sensors.
 
 <Callout type="info" emoji="ℹ️">
-  If the compass icon is not visible, it may be due to the test point or
-  rectifier lacking one or both latitude and longitude properties recorded.
+  Compass icon is only visible, when both latitude and longitude are recorded for the item.
 </Callout>
 
 ## Controls
@@ -49,7 +46,7 @@ The View screen features a control panel accessible by tapping the "Show control
 - **Add a photo** - (For test points and rectifiers only) (Premium only) This option allows the user to attach images to the survey item.
 - **Add reading** - (For test points and rectifiers only) This option allows the user to add extra readings to the item, similar to the "Add reading" button in the Edit screen.
 - **Edit** - This option opens the Edit screen, where you can modify all the previously recorded properties.
-- **Write to tag** - This option allows to write item information to the NFC tag. Check [NFC labels](../nfc.mdx) to learn more.
+- **Write to tag**- (For test points or rectifiers only) - This option allows to write item information to the NFC tag. Check [NFC labels](../nfc.mdx) to learn more.
 - **Delete** - This option allows the user to permanently delete the item.
 
 <Callout type="info" emoji="ℹ️">

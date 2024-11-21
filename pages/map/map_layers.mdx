@@ -4,7 +4,9 @@ import { Callout } from "nextra/components";
 
 # Map layers
 
-The Map layers feature enables the display of additional geodata on the map. It converts .kml and .gpx files to geoJSON format and saves them with the survey. This ensures that geo features are available when exporting the survey elsewhere.
+'Map layers' feature allows to display additional geodata on the map. It extracts information from external files and saves it with the survey.
+
+Map layers only available for users with subscription.
 
 ## Creating map layers
 
@@ -15,9 +17,9 @@ To add a new layer, simply press the layer button on the right side of the scree
   <Image src="/images/map/5.6.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-After selecting "Add a Map Layer," you will be prompted to choose a KML or GPX file. Once you've selected the file, you'll be transferred to the layer edit screen.
+After selecting "Add a map layer," you will be prompted to choose a geodata file. Once you've selected the file, you'll be transferred to the 'Edit' screen.
 
-On the layer edit screen, you can name the layer, assign a layer color, and adjust the stroke width. All features within a single layer will share the same color. If you wish to have multiple colors, you'll need to use different layers.
+On the 'Edit' screen, you can name the layer, assign a layer color, and adjust the stroke width. All features within a single layer will share the same color.
 
 Once you've selected the appropriate parameters and added comments, press "Create."
 
@@ -33,20 +35,19 @@ If a survey have map layers, you will see their names in the list along with the
   <Image src="/images/map/5.8.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-You can also edit layer properties or delete the layer from the survey. When deleting map layer, the original .kml or .gpx file will not be affected.
+You can also edit layer properties or delete the layer from the survey. When deleting map layer, the original geodata file will not be affected.
 
 ## Geo file requirements
 
-Imported .kml or .gpx file must:
+Imported geodata file must:
 
 - Be less than 3MB
 - Has less than 500 features
+- Supported formats: .kml, .kmz, .gpx and .geojson
 
-Geo data can be complex and may require significant computing power to display. Therefore, there is a 3 MB limit for importing geo files. If your file exceeds this limit, please use third-party software to split it into smaller chunks.
+Applying these limits ensures that your survey file will work well on large number of devices. If your file exceeds this limit, please use third-party software to split it into smaller chunks.
 
-Additionally, there is a cap on the number of features that a single layer can contain. If a layer has more than 500 features, the extra features will be cropped, and a prompt message will be displayed. It's advisable to avoid using complex geo-data files for better performance, especially on older devices.
-
-To learn more about features refer to [GeoJSON documentation](https://geojson.org)
+If a layer has more than 500 features, the extra features will be cropped, and a prompt message will be displayed. It's advisable to avoid using complex geodata files for better performance, especially on older devices.
 
 <Callout type="info" emoji="ℹ️">
   A single survey can have up to ten map layers.

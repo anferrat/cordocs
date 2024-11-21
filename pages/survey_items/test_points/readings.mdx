@@ -29,15 +29,14 @@ Here is a list of reading types that can be created in Corpad:
 
 ### Pipeline test lead
 
-This reading indicates a test lead attached to the pipe. You can specify the pipeline it belongs to, along with properties such as wire gauge, color, and potential readings. (see [Potentials](/potentials.mdx))
+This reading describes a test lead attached to the pipe. You can specify the pipeline it belongs to, along with properties such as wire gauge, color, and potential readings. (see [Potentials](/potentials.mdx))
 
 <ImageView>
   <Image
     src="/images/survey_items/3.7.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Pipeline riser
@@ -49,34 +48,31 @@ This reading refers to a single pipe riser or an above-ground structure connecte
     src="/images/survey_items/3.8.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Foreign structure
 
-This reading describes an unprotected and/or a foreign structure that is not part of a survey structure. It has potentials and name property.
+This reading describes an unprotected and/or a foreign structure that is not part of a survey structure. It has potentials and name properties.
 
 <ImageView>
   <Image
     src="/images/survey_items/3.9.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Test lead
 
-This reading describes any test lead that cannot be assigned to any other available types. It has potentials and name property.
+This reading describes any test lead that cannot be assigned to any other available types (e.g. for casing). It has potentials and name properties.
 
 <ImageView>
   <Image
     src="/images/survey_items/3.10.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Anode test lead
@@ -88,21 +84,19 @@ This reading describes a test lead connected to a galvanic anode. It includes pr
     src="/images/survey_items/3.11.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Coupon
 
-This reading describes a test lead attached to a corrosion coupon. It includes potentials, wire properties, and coupon details such as type (AC/DC), area, and current. “Connected to” property declares what other reading in the test point the coupon is attached to.
+This reading describes a test lead attached to a corrosion coupon. It includes potentials, wire properties, and coupon details such as type (AC/DC), area, and current. “Connected to” property declares what other reading(pipe test lead, or riser) in the test point the coupon is attached to.
 
 <ImageView>
   <Image
     src="/images/survey_items/3.12.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Stationary reference cell
@@ -114,21 +108,19 @@ This reading describes a test lead connected to a stationary reference cell. It 
     src="/images/survey_items/3.13.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Bond
 
-This reading describes a bond between two or more other readings within a test point. It is used to record current value and its direction between two or readings (Pipeline test lead to Anode test lead, pipeline test lead to Pipeline test lead etc.)
+This reading describes a bond between two or more other readings within a test point. It is used to record current value and its direction between two or more readings ('Pipeline test lead' to 'Anode test lead', 'Pipeline test lead' to 'Pipeline test lead'  and etc.)
 
 <ImageView>
   <Image
     src="/images/survey_items/3.14.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Shunt
@@ -140,13 +132,12 @@ This reading refers to a connection between readings using a shunt. It includes 
     src="/images/survey_items/3.15.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 <Callout type="info" emoji="ℹ️">
   Current is calculated based on voltage drop and shunt ratio/factor. You cannot
-  edit current in the shunt reading, use Bond reading instead.
+  edit current in the shunt reading, use 'Bond' reading instead.
 </Callout>
 
 ### Isolation assembly
@@ -158,8 +149,7 @@ This reading describes a point of isolation between risers and/or foreign struct
     src="/images/survey_items/3.16.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 ### Soil resistivity test
@@ -171,6 +161,5 @@ This reading describes a dataset with soil resistivity measurement results. The 
     src="/images/survey_items/3.17.png"
     alt="Readings"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>

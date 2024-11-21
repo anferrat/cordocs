@@ -1,5 +1,18 @@
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+
 # Test points
 
-Test points are the basic survey items, that are used to capture 
+Test points are the basic survey items, that are used to capture cathodic protection data. Test points has fixed set of properties such as name, type, latitude and longitude and etc.
 
-Test Points consist of a list of readings, such as pipeline test leads, anode test leads, and shunts. At the same time, test point readings can have their own properties, such as current, potentials, shunt properties etc. This structure allows for the creation of complex test point compositions commonly encountered in the field.
+In addition to properties, test points contain "Reading items" (referred as Readings). Reading items examples are test leads, coupons, shunts, risers etc. Single test point can have unlimited number of readings.
+
+<ImageView>
+  <Image
+    src="/images/survey_items/3.36.png"
+    alt="Readings"
+    width={300}
+    height={300} />
+</ImageView>
+
+Readings also have their own properties, and they can also contain voltage and current fields, where field data can be recorded. This layered structure allows to create complex test points that could be often encountered in the field.

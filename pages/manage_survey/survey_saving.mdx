@@ -4,9 +4,9 @@ import { Callout } from "nextra/components";
 
 # Saving surveys
 
-When you make changes to a survey, all modifications are stored locally in the app's database. Changes made in the View Screen are automatically updated in the database, while changes made in the Edit Screen are saved to the database only after you press the "Save" button. The database retains these changes even when you close the app, but it will be cleared if the app is uninstalled.
+When you make changes to a survey, all modifications are stored locally in the app's database. Changes made in the 'View' screen are automatically updated in the database, while changes made in the 'Edit' screen are saved to the database only after you press the "Save" button. The database retains these changes even when you close the app, but it will be cleared if the app is uninstalled.
 
-When you're working with multiple surveys, each survey is stored within a survey file, which is a text document containing survey information. To close current survey and open another one, access the main menu and select "Save changes and exit". This action transfers the survey data from the database to the survey file and clears the database to accommodate the opening of another survey.
+When you're working on multiple surveys, each survey is stored within a separate survey file. To close current survey and open another one, access the main menu and select "Save changes and exit". This action transfers the survey data from the database to the survey file and clears the database.
 
 Alternatively, you can press "Save Changes" to save all modifications made to the database to the file and continue working on current survey.
 
@@ -15,8 +15,7 @@ Alternatively, you can press "Save Changes" to save all modifications made to th
     src="/images/manage_survey/4.6.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 <Callout type="info" emoji="ℹ️">
@@ -30,15 +29,14 @@ Alternatively, you can press "Save Changes" to save all modifications made to th
 
 ## Exit survey without saving
 
-In rare circumstances, such as encountering a bug preventing you from saving a survey or when you wish to discard changes made to the survey, there is an option to exit from the opened survey to the main list without saving. However, it's crucial to use this option judiciously and only when fully aware of its implications.
+In rare circumstances, such as encountering a bug preventing you from saving a survey or when you wish to discard changes made to the survey after it was opened, there is an option to exit current survey without saving changes to the file. Be aware that all the changes to the survey made after 'Last Sync' date, will be discarded.
 
-To utilize this option, navigate to Settings and scroll down to find the "Exit Without Saving" button. Selecting this option will exit the survey without saving any changes. Again, exercise caution and use this option sparingly.
+To utilize this option, navigate to 'Settings' and scroll down to find the "Exit without saving" button. Use this option sparingly and only when absolutely needed.
 
 <ImageView>
   <Image
     src="/images/manage_survey/4.7.png"
     alt="Add"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>

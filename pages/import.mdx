@@ -4,17 +4,17 @@ import { Callout } from "nextra/components";
 
 # Import
 
-You can utilize .csv files to speed up the process of generating multiple items within a survey. Here's how:
+To quicky populate survey with the data, you can import information from a spreadsheet file. 
 
-1. Begin by creating an empty survey.
-2. Next, navigate to the bottom of the screen and tap on the "Add" button.
-3. From the options that appear, select "Import from .csv".
+1. Create new survey if you don't have one already.
+2. Navigate to the bottom of the screen and tap on the "Add" button.
+3. From the options that appear, select "Import from spreadsheet".
 
 <ImageView>
   <Image src="/images/import/7.1.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-This functionality allows you to efficiently populate your survey with data from a .csv file, saving you time and effort.
+You will be re-directed to the screen where you can select a file and map columns of the file to survey item properties.
 
 <Callout type="info" emoji="ℹ️">
   Selecting "Import survey from .csv" in the survey list screen functions
@@ -24,25 +24,26 @@ This functionality allows you to efficiently populate your survey with data from
 
 ## Selecting a file
 
-Before importing items from a .csv file, you need to specify the item type you want to import. Remember, you can only import items of a single type at a time, whether it's test points, pipelines, or rectifiers.
+Select and item type ('Test Point', 'Rectifier' or 'Pipeline') that you wish to import. Only one type can be imported at once.
 
-If you're importing pipelines, it's advisable to do so before importing test points, allowing you to assign test points to the imported pipelines seamlessly. Additionally, ensure that you've configured the potential types in Settings and created custom potentials if necessary.
+Before importing test points, make sure that your survey has all the pipelines and potential types that you would want to be assigned.
 
 <ImageView>
   <Image src="/images/import/7.2.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-Once you've selected the item type, click on the "Select file" button. This action will open the system file picker, allowing you to locate the .csv file you want to import.
+Once you've selected the item type, click on the "Select file" button. This action will open the system file picker, allowing you to locate the spreadsheet file you want to import.
 
-Your file should adhere to common spreadsheet formats, using UTF-8 encoding with commas as delimiter characters. The first row of the .csv file will be treated as headers for the data, and the values will not be imported. If the first row contains empty cells, the system will generate default column names.
+Your file should adhere to common spreadsheet formats, using UTF-8 encoding with commas as delimiter characters.
 
-Avoid using special characters in the first row, as this could lead to errors during the import process, preventing the file from being imported successfully.
+Supported file formtas are .xlsx and .csv. File must be less than 3MB.
+
+The first row of the file will be treated as headers for the data. If the first row contains empty cells, the system will generate default column names.
+
+Avoid using special characters in the first row, as this could lead to errors during the import process, preventing the file from being imported properly.
 
 <Callout type="info" emoji="ℹ️">
-  It's important to avoid using large .csv files. Large files can strain device
-  resources and may cause the app to crash, particularly on older or less
-  powerful devices. Keeping your .csv files smaller ensures smoother performance
-  and reduces the risk of encountering app crashes during the import process.
+  There is no limit on how many rows could be imported from a single file. 3MB limit allows to create survey files with thousand of items, however such surveys could impact the perfomance on older devices.
 </Callout>
 
 ## Import parameters
