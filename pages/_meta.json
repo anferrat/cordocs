@@ -1,7 +1,7 @@
 {
-  "index": "Introduction",
-  "---": {
-    "type": "separator"
+  "index": {
+    "title": "Corpad documentation",
+    "display": "hidden"
   },
   "create": "Creating surveys",
   "survey_items": "Survey items",
