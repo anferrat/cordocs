@@ -50,10 +50,10 @@ Avoid using special characters in the first row, as this could lead to errors du
 
 Setting up item properties involves matching the properties of items with columns in your spreadsheet file. On the main screen, you'll find property fields where you can set parameters for how these properties will be assigned a value. Here are the available options:
 
-- **\<Empty\>** - this means that all created items will have this property left blank.
+- **\<Empty\>** - this options means that all created items will have selected property left blank.
 - **Fixed value** - with this option, all created items will have a selected value assigned to this property, regardless of the item's index.
-- **Default name** - this option is only applicable for the name property. It indicates that the name property for each individual item will be assigned as a combination of the default name (see Default names) and the index of the item in the spreadsheet.
-- **Field value** - displayed with the label "field:" followed by the name of the selected field. This indicates that values for this property will be generated from a column in the spreadsheet. You can view the values in the selected column by pressing the Text File Button on the left side of the field.
+- **Default name** - this option is only applicable for the name property. It means that the name property for each individual item will be assigned as a combination of the default name (see Default names) and the index of the item in the spreadsheet.
+- **Field value** - displayed with the label "field:" followed by the name of the selected field. This means that values for this property will be taken from selected column in the spreadsheet. You can view the values of that column by pressing the "Text File Button" on the left side of the field.
 
 <ImageView>
   <Image src="/images/import/7.3.png" alt="Add" width={300} height={300} />
@@ -66,21 +66,21 @@ Setting up item properties involves matching the properties of items with column
   in the case of the name property), then the item will be skipped.
 </Callout>
 
-## Adjusting import parameters for a property
+## Selecting import parameters for a property
 
-To adjust the import parameters, simply press on the property that you would like to modify, which will prompt a parameter screen to appear.
+To select the import parameters, simply press on the property that you would like to modify, which will prompt a parameter screen to appear.
 
 In this parameter screen, you will find a list of options to select from:
 
-- **Use fixed value** - when this option is selected, you can simply type in the value that you want to assign, or select it from a list of predefined values.
+- **Use fixed value** - when this option is selected, you need to type the fixed value that you want to assign, or select it from a list of predefined values.
 
-- **Use values from a column in the data file** - selecting this option allows you to choose a column name from your spreadsheet file. The values from this selected column will then be assigned to the new items.
+- **Use values from a column in the data file** - selecting this option allows you to choose a column name from your spreadsheet file. The values from this selected column will be used for generated survey items.
 
-- **Use default name** - this option assigns the default name of an item or reading to the property. Additionally, you can specify a reading index for the first item.
+- **Use default name** - this option assigns the default name of an item or reading to the property. You can select an index that will be assigned to the first generated item. Used only for the name property.
 
 - **Merge values from two or more columns** - this option is only available for some properties. When selected, it combines values from multiple columns and assigns them to the property.
 
-For properties such as potentials, current, etc., you should also select a unit when importing them from the spreadsheet. Ensure that you select the appropriate unit used in the spreadsheet. This step is necessary for Corpad to accurately convert these values for its internal database.
+For properties such as potentials, current, etc., you should also select a unit when importing them from the spreadsheet. Ensure that you select the appropriate unit that is used in the spreadsheet. This step is necessary for Corpad to accurately convert these values for its internal database.
 
 <ImageView>
   <Image src="/images/import/7.4.png" alt="Add" width={300} height={300} />
@@ -89,14 +89,14 @@ For properties such as potentials, current, etc., you should also select a unit 
 
 ## Attribute mapping
 
-Attribute mapping is a useful feature designed to facilitate the import process, especially when dealing with pre-defined values in the Corpad app. Here's how attribute mapping works:
+Attribute mapping is a useful feature designed to facilitate the import process, when dealing with pre-defined values in the Corpad app. Here's how attribute mapping works:
 
-**Example Scenario:**
+**Example**
 
 Let's say you have a spreadsheet containing test points, with two columns: 'Name' and 'Type'. In the 'Type' column, you have values A, B, and C, where A and B represent different types of test stations, and C represents a header.
 
 <ImageView>
-  <Image src="/images/import/7.6.png" alt="Add" width={300} height={300} />
+  <Image src="/images/import/7.13.png" alt="Add" width={300} height={300} />
 </ImageView>
 
 **Attribute Mapping Process:**
@@ -105,7 +105,7 @@ Let's say you have a spreadsheet containing test points, with two columns: 'Name
 2. Choose the option 'Use values from a column in the data file' and select the 'Type' column.
 3. At the bottom part of the screen, you'll find the attribute mapping section.
 4. Select the property value 'Test Station' from the Corpad app.
-5. From the list of 'Values from .csv', select values A and B.
+5. From the list of 'Values from spreadsheet', select values A and B.
 6. Press the arrow button to add the new attribute mapping to the list.
 
 <ImageView>
@@ -146,7 +146,7 @@ After selecting all parameters, click on "Import" and then "Start". A modal will
 If the import didn't yield the desired result, you have the option to cancel the recent import. This functionality is available immediately after the import process, but it won't be accessible if you navigate away from the survey where the items were imported. To undo the import, follow these steps:
 
 1. Tap on the "Add" button at the bottom of the screen.
-2. Select "Import from .csv".
+2. Select "Import from spreadsheet".
 3. You should see the status of the last import at the top of the screen.
 4. Press "Undo import", and all the imported items will be removed from the current survey.
 

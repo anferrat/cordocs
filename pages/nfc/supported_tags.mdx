@@ -4,7 +4,7 @@ import ImageView from "../../components/imageView";
 
 # Supported tags
 
-Corpad utilizes NDEF (NFC Data Exchange Format) to transfer data to and from NFC tags. It is the most common format for storing data on NFC tags and is supported by most phones and tag manufacturers.
+Corpad utilizes NDEF (NFC Data Exchange Format) to transfer data between phone and NFC tags. It is the most common format for storing data on NFC tags and is supported by most phones and tag manufacturers.
 
 ## Tag capacity
 
@@ -17,8 +17,7 @@ When writing to the tag with Corpad, the message size in bytes is displayed to g
     src="/images/nfc/10.3.jpg"
     alt="NFC tag view"
     width={300}
-    height={300}
-  />
+    height={300} />
 </ImageView>
 
 The message size will depend on several factors, including the number of readings, the length of comments, and other data being stored. Typically, the message size can range between approximately 100 to 1000 bytes, with an average size of around 300 to 400 bytes for a fairly complex test point.
@@ -33,4 +32,4 @@ We recommend using [NTAG](https://www.nxp.com/products/rfid-nfc/nfc-hf/ntag-for-
 
 - **NTAG216** - Offering a larger capacity of 888 bytes, this tag provides plenty of space to store almost any test point or rectifier data, but it is also more expensive.
 
-Other NFC tags are also supported by Corpad since it utilizes NDEF (NFC Data Exchange Format), which is the default standard for writing and reading information to and from NFC tags. Therefore, any NFC tag that adheres to the NDEF standard should work seamlessly with Corpad.
+Other NFC tags are also work with Corpad, as long as they support NDEF standard.
