@@ -14,13 +14,9 @@ const config: DocsThemeConfig = {
   sidebar: {
     defaultMenuCollapseLevel: 1
   },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    if (asPath !== '/') {
-      return {
-        titleTemplate: '%s – Nextra'
-      }
-    }
+  defaultSEO: {
+      title: "Corpad Docs",
+      titleTemplate: '%s | Corapd Docs',
   },
 };
 
