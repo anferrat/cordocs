@@ -3,6 +3,6 @@
   "generating_qr_code": "Creating QR codes",
   "reading_labels": "Reading label data",
   "supported_tags": "Supported NFC tags",
-  "tag-errors": "Common errors",
+  "tag-errors": "NFC tag errors",
   "order_tags": "Order NFC tags"
 }
