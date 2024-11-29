@@ -1,0 +1,84 @@
+import { Cards, Card, Callout } from "nextra/components";
+import Image from "next/image";
+import ImageView from "../../components/imageView";
+
+## Reading data from labels
+
+
+To read data from the NFC label, bring your phone close to it. Make sure that NFC is enabled in settings (Android only). The image below shows where the NFC module is located for Android and Apple devices.
+
+<ImageView>
+  <Image
+    src="/images/nfc/10.5.jpg"
+    alt="NFC tag view"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+<Callout type="info" emoji="ℹ️">
+  Apple phones before iPhone X have a built-in NFC module, but they do not
+  support background reading. To read NFC tags with older devices, go to
+  'Settings' -> 'NFC Labels', press 'Read NFC label', and then bring your phone
+  close to the tag.
+</Callout>
+
+To scan QR codes, use the phone's camera or any other third party application, that can scan QR codes. Currenty, there is no in-built solution to scan QR codes inside the Corpad app.
+
+After reading the label, you will be redirected to the new screen, where the information recorded on the label is displayed.
+
+<ImageView>
+  <Image
+    src="/images/nfc/10.1.png"
+    alt="NFC tag view"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+To scan 
+
+### Create or find item
+
+There are two ways you can utilize label information:
+
+- **Add to the survey** - you can create a new item in the currently opened survey with the information from the tag.
+
+- **Find in the survey** - you can locate an item in the currently opened survey by UID, name, or GPS coordinates.
+
+<ImageView>
+  <Image
+    src="/images/nfc/10.4.png"
+    alt="NFC tag view"
+    width={300}
+    height={300}
+  />
+</ImageView>
+
+**UID mathing**
+
+UID stands for Unique Identifier, which is a unique data string assigned to a test point or rectifier when it is created. To locate a test point by UID, the user must have the same survey file as the one at the time when the test point was recorded to the label (or a survey file created from a template).
+
+For example, if the survey file was imported from a spreadsheet file, test points or rectifiers will have different UIDs, so you should use other methods to locate them in the survey.
+
+**Name matchng**
+
+This option allows you to locate items in your survey that have similar names to the item from the NFC label. It can be useful when UID matching did not work.
+
+**Location matching**
+
+This option is available for NFC labels with GPS coordinates. It searches for items in your survey in close proximity to the NFC label and sorts them by distance.
+
+## Scanned label history
+
+Recently scanned NFC labels are automatically saved to your device for easy access later. You can find them at any time by navigating to 'Settings' -> 'QR code and NFC labels'.
+
+From there, you can view the details of the scanned labels and add them to currently opened survey.
+
+<ImageView>
+  <Image
+    src="/images/nfc/10.6.png"
+    alt="NFC tag view"
+    width={300}
+    height={300} />
+</ImageView>

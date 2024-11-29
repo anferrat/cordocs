@@ -1,6 +1,8 @@
 {
-  "writing_and_reading": "Writing and reading",
-  "supported_tags": "Supported tags",
+  "writing_and_reading": "Writing to NFC tags",
+  "generating_qr_code": "Creating QR codes",
+  "reading_labels": "Reading label data",
+  "supported_tags": "Supported NFC tags",
   "tag-errors": "Common errors",
-  "order_tags": "Order tags"
+  "order_tags": "Order NFC tags"
 }
