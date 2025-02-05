@@ -4,26 +4,33 @@ import { Callout } from "nextra/components";
 
 # Collecting data
 
-To collect potential data, first select a test point from a survey and navigate to the view screen. If the multimeter is paired, there will be a button on the left side of the field with the multimeter icon. Tap on this button to access the multimeter view.
+To collect data using multimeter, first select a test point or rectifier from a survey. If a multimeter is paired, there will be a button on the left side of the field with the multimeter icon. Tap on this button to start capturing data.
+
+Multimiter toggle has to be in the correct position (when applicable) before you start capturing. Capture begins When a notification at the top of the screen appears. Captured values will automatically populate selected field or fields (in case of ON O/OFF potential capture).
+
+To save measurement, press button on the left side of the selected field one more time.
+
+<Callout>
+ Pokit Pro supports capturing reading when physical button is pressed, however there is a bug that causes multimeter to restart after button is pressed when measuring ON/OFF poetntials. (It works fine when capturing individual readings).
+ While capturing readings with button still works, it's better to use capture button in the app.
+</Callout>
+
 
 <ImageView>
   <Image src="/images/multimeter/9.6.png" alt="Add" width={300} height={300} />
   <Image src="/images/multimeter/9.7.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-<Callout type="info" emoji="ℹ️">
-  Ensure that your multimeter is set to the appropriate setting before
-  attempting to capture values.
-</Callout>
-
-To capture measured value, either press the 'Capture' button located at the bottom of the screen or use a button on the multimeter itself.
-
 ## Capturing ON/OFF cycles
+When capturing ON/OFF potentials, the app will attempt to populate both fields at the same time. This is default behavior but you can turn it off in settings.
 
-When capturing potentials, you will have an option to activate cycle capture. The mode for determining ON/OFF cycles and their times will be shown. You can adjust these values in 'Settings' -> 'Digital Multimeter'.
+The cycle capture mode and cycle duration will be shown in the notification at the top of the screen. ON/OFF potential readings will be updated with the interval of selected cycle time.
+
+<Callout>
+ In order to capture ON/OFF potentials at the same time, they both have to be assigned to the same reference cell.
+</Callout>
 
 <ImageView>
   <Image src="/images/multimeter/9.8.png" alt="Add" width={300} height={300} />
 </ImageView>
 
-When capturing both potentials, you can select either the ON or OFF potential fields. The captured values will be assigned to both fields (if both are present in the same reading) according to the cycle settings.
