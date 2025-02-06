@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ImageView from "../../components/imageView";
+import { Callout } from "nextra/components";
 
 # Measurements and Graph
 
@@ -7,23 +8,26 @@ You can access connected multimeter to view currently measured readings. It's av
 
 //image
 
-Available modes are displayed at the top part of the screen. Switch te toggle on the multimeter (if available) to view other available modes.
+Available modes are displayed at the top part of the screen. Switch the toggle on the multimeter (if available) to view other available modes.
 
 //image
 
-The multimeter ranges available at the bottom part of the screen. Select the appropriate range for your measurement in order to get most accurate reading. When measured value is exeeding the maximum value for selected range, the app wll attempt to select different range and "or" flag will be displayed. Make sure to not exceed maximums that are displayed in the yellow box at the top of the screen.
+Available multimeter ranges displayed at the bottom part of the screen. Select the appropriate range for your measurement in order to get most accurate reading. When measured value is exeeding the maximum value for selected range, the app wll attempt to select different range and "or" flag will be displayed.
+
+<Callout>
+Make sure to not exceed maximum allowed limits that are displayed in the yellow box at the top of the screen.
+</Callout>
 
 ## Controls
 
-You can save currently dsiplayed value with 'Save' button. The values will be stored on the device and can be accesed by pressing 'History' button. Long press on the value, will copy it into the clipboard and you can also export all readings to .csv file by pressing 'Export all' button. The generated file will be available in 'Exported files' section in Settings. 
+You can save currently dsiplayed value with 'Save' button. The values will be stored on the device and can be accesed by pressing 'History' button. Long press on the value, to copy it into the clipboard.. You can also export readings to .csv file by pressing 'Export all' button. The generated file will be available in 'Exported files' section in Settings. 
 
-Hold button will freeze the last recorded value on the screen, untill resume button is pressed.
+'Hold' button will freeze the last recorded value on the screen, until 'Resume' button is pressed.
 
 ## Graph mode - beta
 
 //image
 
-
-To view readings in a chart, press Graph button. Y-axis represents values (e.g. Voltage or Current), while X-axis represents time. You can adjust max values for the axes in by manually entering them in the fields below the chart.
+To view readings in a chart, press 'Graph' button. Y-axis represents values (e.g. Voltage or Current), while X-axis represents time. You can adjust max values for the axes in by manually entering them in the fields above the chart.
 
 

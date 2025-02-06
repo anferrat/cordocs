@@ -66,12 +66,13 @@ Here are some reasons why:
 Therefore you can manually adjust ON/OFF delay parameters, if you see that your ON/OFF readings are captued incorrectly. 
 </Callout>
 
-**Time syncronization mode** - indicates how time should be syncronized on your phone.
+**Time syncronization method** - indicates how time should be syncronized on your phone.
 
 <Callout>
 Usually interrupters are syncronized via GPS and run on the schedule in sync with UTC time. In order to capture readings at the right moment, your phone time must also be syncronized with UTC. However, unlike interruptors, we can use different methods to achieve this syncronization.
+
 One method is using GPS - same as interruptor, we obtain current time from satellite using phone's GPS module. It requires clear sky access and may take some time to obtain.
-Another method is NTP (Network Time Protocol). It gathers time data from dedicated time servers, it is fast, but requires access to the internet.
+Another method is NTP (Network Time Protocol). It gathers time data from dedicated time servers. This method doesn't need clear sky view, but requires Internet access.
 You can select either method or use Mixed mode, where phone will use one or another depending on what is available.
 When syncronization is achieved, "Delta" value is obtained. It indicates the difference between your device internal clock and UTC time, and it is used for determining ON/OFF shifts.
 </Callout>
