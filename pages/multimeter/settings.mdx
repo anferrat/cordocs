@@ -56,7 +56,7 @@ Cycle duration must be aliquot to 60 seconds (e.g., 5 sec ON, 1 sec OFF - 6 sec 
 
 **ON delay and OFF delay** - parameters that allow users to adjust the moment of when ON or OFF reading is collected.
 
-<Callout>
+<Callout type="info" emoji="ℹ️">
 Delays are needed adjustment purpose. When UTC time indicates that rectifier was just turned off, it doesn't mean that rectifier is already off and measured reading at that time is your instant off potential. 
 Here are some reasons why:
  - Switches take time to change their position.
@@ -68,7 +68,7 @@ Therefore you can manually adjust ON/OFF delay parameters, if you see that your 
 
 **Time syncronization method** - indicates how time should be syncronized on your phone.
 
-<Callout>
+<Callout type="info" emoji="ℹ️">
 Usually interrupters are syncronized via GPS and run on the schedule in sync with UTC time. In order to capture readings at the right moment, your phone time must also be syncronized with UTC. However, unlike interruptors, we can use different methods to achieve this syncronization.
 
 One method is using GPS - same as interruptor, we obtain current time from satellite using phone's GPS module. It requires clear sky access and may take some time to obtain.
@@ -81,5 +81,3 @@ When syncronization is achieved, "Delta" value is obtained. It indicates the dif
 
 Determines ON/OFF cycles by analyzing collected readings and cycle duration.
 Requires different ON and OFF cycle durations for accurate results.
-
-Select algorithms that works 
