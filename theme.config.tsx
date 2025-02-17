@@ -47,7 +47,7 @@ const config: DocsThemeConfig = {
         titleTemplate: "Corpad Docs"
       }
   },
-  darkMode: false,
+  darkMode: true,
   faviconGlyph: 'C'
 };
 
