@@ -10,10 +10,10 @@ To access the multimeter settings, navigate to 'Settings' -> 'Digital Multimeter
 
 Unpair button will disconnect and unpair active multimeter.
 
-## Time syncronization
+## Time synchronization
 
-Time syncronization button only appears when time syncronization mode is selected for capturing ON/OFF potential readings. When time is not syncronized, user cannot use Time sync mode and will be using High/Low mode instead until syncronization is achieved.
-To request immediate syncronization press the button and wait for the result. In case of GPS syncronization you need to have access to clear sky, in case of NTP - access to the internet.
+Time synchronization button only appears when time synchronization mode is selected for capturing ON/OFF potential readings. When time is not synchronized, user cannot use Time sync mode and will be using High/Low mode instead until synchronization is achieved.
+To request immediate synchronization press the button and wait for the result. In case of GPS synchronization you need to have access to clear sky, in case of NTP - access to the internet.
 
 <ImageView>
   <Image src="/images/multimeter/9.5.png" alt="Add" width={300} height={300} />
@@ -45,9 +45,9 @@ There are three algorithms for determining ON/OFF readings during interruption c
 #### High-Low:
 
 Assigns the most negative reading measured during the cycle to the ON potential and the most positive to the OFF potential.
-Simple and effective, but may be inaccurate in case of opposite shifts or false readings collected during the cycle.
+Simple and effective but may be inaccurate in case of opposite shifts or false readings collected during the cycle.
 
-#### Time syncronization
+#### Time synchronization
 
 Synchronizes your phone clock with UTC time and records ON and OFF readings according to the current time.
 Cycle duration must be aliquot to 60 seconds (e.g., 5 sec ON, 1 sec OFF - 6 sec total. 60/6 = 10 cycles per minute).
@@ -61,20 +61,20 @@ Delays are needed adjustment purpose. When UTC time indicates that rectifier was
 Here are some reasons why:
  - Switches take time to change their position.
  - DC decouplers in the CP system may smooth ON/OFF transition and therefore instant off reading cannot be measured right away.
- - Time syncronization algorithm aren't perfect. The error of syncronizaton can be as large as 50 ms.
+ - Time synchronization algorithms aren't perfect. The error of synchronization can be as large as 50 ms.
 
-Therefore you can manually adjust ON/OFF delay parameters, if you see that your ON/OFF readings are captued incorrectly. 
+Therefore, you can manually adjust ON/OFF delay parameters, if you see that your ON/OFF readings are captured incorrectly. 
 </Callout>
 
-**Time syncronization method** - indicates how time should be syncronized on your phone.
+**Time synchronization method** - indicates how time should be synchronized on your phone.
 
 <Callout type="info" emoji="ℹ️">
-Usually interrupters are syncronized via GPS and run on the schedule in sync with UTC time. In order to capture readings at the right moment, your phone time must also be syncronized with UTC. However, unlike interruptors, we can use different methods to achieve this syncronization.
+Usually, interrupters are synchronized via GPS and run on the schedule in sync with UTC time. To capture readings at the right moment, your phone time must also be synchronized with UTC. However, unlike interrupters, we can use different methods to achieve this synchronization.
 
-One method is using GPS - same as interruptor, we obtain current time from satellite using phone's GPS module. It requires clear sky access and may take some time to obtain.
-Another method is NTP (Network Time Protocol). It gathers time data from dedicated time servers. This method doesn't need clear sky view, but requires Internet access.
+One method is using GPS - same as interrupter, we obtain current time from satellite using phone's GPS module. It requires clear sky access and may take some time to obtain.
+Another method is NTP (Network Time Protocol). It gathers time data from dedicated time servers. This method doesn't need clear sky view but requires Internet access.
 You can select either method or use Mixed mode, where phone will use one or another depending on what is available.
-When syncronization is achieved, "Delta" value is obtained. It indicates the difference between your device internal clock and UTC time, and it is used for determining ON/OFF shifts.
+When synchronization is achieved, "Delta" value is obtained. It indicates the difference between your device internal clock and UTC time, and it is used for determining ON/OFF shifts.
 </Callout>
 
 #### Shift
