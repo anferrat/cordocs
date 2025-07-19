@@ -26,18 +26,34 @@ Corpad offers corrosion calculation functionality accessible via 'Settings' -> '
 
 ## Working with calculator
 
-To perform a calculation, fill out the required fields in the calculator and press 'Calculate'. For detailed instructions on the procedure and necessary measurements, press '?' at the top right corner of the screen.
+To perform a calculation, fill in all required fields in the calculator and press Calculate.
+Optionally, you can enter latitude and longitude in decimal format (e.g., 12.34567, 34.5678).
+
+For detailed instructions on the procedure and necessary measurements of the calculation, press '?' at the top right corner of the screen.
+Input parameters cannot be changed after result is calculated. 
+<ImageView>
+  <Image src="/images/calculator/8.3.png" alt="Add" width={300} height={300} />
+  <Image src="/images/calculator/8.6.png" alt="Add" width={300} height={300} />
+</ImageView>
 
 After the calculation is completed, the result view will be displayed at the top. You can save the result by pressing the 'Save' button. To access saved calculations, press the 'History…' button at the top right side of the screen and select the saved calculation.
 
-To export the initial data and calculation result as a .csv file, press the 'Export' button. The file will be available in [Exported files](./export/exported_files.mdx) screen To start a new calculation, press 'Reset'.
+<ImageView>
+  <Image src="/images/calculator/8.4.png" alt="Add" width={300} height={300} />
+</ImageView>
+
+To export the initial data and calculation result as a .csv file, press the 'Export' button. The file will be available in [Exported files](./export/exported_files.mdx) screen.
+
+The exported .csv file will include input parameters and result of the calculation, along with date and time when calculation was performed and gps coordinates if they were entered.
+
+If coordinates are provided, the calculation will appear on the map within the currently open survey.
+Note: You must press 'Save' button for the calculation to be displayed on the map.
 
 <ImageView>
-  <Image src="/images/calculator/8.3.png" alt="Add" width={300} height={300} />
-  <Image src="/images/calculator/8.4.png" alt="Add" width={300} height={300} />
-  <Image src="/images/calculator/8.5.png" alt="Add" width={300} height={300} />
+  <Image src="/images/calculator/8.7.png" alt="Add" width={300} height={300} />
+ <Image src="/images/calculator/8.8.png" alt="Add" width={300} height={300} />
 </ImageView>
 
 <Callout type="info" emoji="ℹ️">
-  Saved calculations cannot be edited, but can be exported.
+ Calculations are not attached to a single survey, and can be viewed even when there are no surveys opened.
 </Callout>
